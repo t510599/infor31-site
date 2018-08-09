@@ -22,7 +22,7 @@ var courseTemplate =
         <button class="ts primary button">了解更多</button>
     </div>
 </div>`;
-var contentTemplate =
+var modalContentTemplate =
 `<div class="ts medium image">
     <img src="{{ image }}" />
 </div>
@@ -74,25 +74,27 @@ function getCourse(){
 
 function parseCourse(json){
     if (json.length < 1) {
-        $('#refreshPlaceholder').children('.empty').show();
+        slate.children('.empty').show();
         slate.children('.refresh').css('display','none');
         return undefined;
     } else {
-        slate.children('.empty').css('display','none');
-        slate.children('.refresh').css('display','none');
+        slate.children('.empty,.refresh').css('display','none');
         slate.css('display','none');
+        courses = []; // reset
         json.forEach((course) => {
+            courses.push(course);
+            var buttonSelector = '#courseData .ts.card[data-course="{{ name }}"] .button'.replace('{{ name }}',course.name);
             if (course.time == "") {
                 textNode = courseTemplate.replace(/{{ name }}/g,course.name).replace('{{ icon }}',course.icon).replace('{{ time }}','敬請期待');
                 $('#courseData').append(textNode)
-                $('#courseData .ts.card[data-course="{{ name }}"] .button'.replace('{{ name }}',course.name)).html('敬請期待');
-                $('#courseData .ts.card[data-course="{{ name }}"] .button'.replace('{{ name }}',course.name)).addClass('disabled')
+                $(buttonSelector).html('敬請期待');
+                $(buttonSelector).addClass('disabled')
             } else {
                 textNode = courseTemplate.replace(/{{ name }}/g,course.name).replace('{{ icon }}',course.icon).replace('{{ time }}','時間: '+course.time);
                 $('#courseData').append(textNode)
-                $('#courseData .ts.card[data-course="{{ name }}"] .button'.replace('{{ name }}',course.name)).click(function() {
+                $(buttonSelector).click(function() {
                     modal.children('.header').html(course.name);
-                    modal.children('.content').html(contentTemplate.replace('{{ image }}',course.image).replace('{{ description }}',course.description))
+                    modal.children('.content').html(modalContentTemplate.replace('{{ image }}',course.image).replace('{{ description }}',course.description))
                     ts('.ts.modal').modal('show');
                 });
             }
@@ -105,7 +107,7 @@ function hasShownOnTheScreen() {
     // because of pusher, offset is strange
 }
 
-$('#refreshPlaceholder').click(function() {
+slate.click(function() {
     if (this.dataset.refresh == "true") {
         getCourse();
     } else {
