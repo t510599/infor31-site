@@ -1,0 +1,235 @@
+/* General styles */
+* {
+    transition: all .2s ease;
+    letter-spacing: .02em;
+    font-family: Consolas,"SF Pro TC","SF Pro Text","SF Pro Icons","PingFang TC","Helvetica Neue","Helvetica","Microsoft JhengHei","Segoe UI",Ubuntu,微軟正黑體,"LiHei Pro","Droid Sans Fallback",Roboto,"Helvetica Neue","Droid Sans","Arial",sans-serif;
+}
+body,html {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+body {
+    width: 100%;
+}
+img {
+    max-width: 100%;
+    object-fit: contain;
+}
+.placeholder {
+    opacity: 0;
+}
+
+/* Banner */
+#banner {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#banner .header {
+    font-size: 3em;
+}
+#banner > * {
+    z-index: 2;
+    animation-delay: .7s;
+    letter-spacing: .12em;
+}
+
+/* filter */
+.filter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+/* Banner menu */
+#bannerMenu {
+    position: absolute;
+    top: 1.5em;
+    z-index: 3;
+    width: 100%;
+}
+#bannerMenu .item,#defaultMenu .item {
+    border-radius: 0;
+}
+#defaultMenu i.icon,#bannerMenu i.icon{
+    margin: 0;
+    font-size: 1.4em;
+}
+#bannerMenu > * > .item:first-of-type {
+    font-weight: 700;
+    color: white;
+    font-size: 1.2em;
+}
+#bannerMenu .item {
+    color: lightgray;
+}
+#bannerMenu .item:hover {
+    color: unset;
+}
+
+/* Default menu */
+#defaultMenu {
+    position: fixed;
+    top: 0;
+    height: auto;
+    z-index: 20;
+    background-color: white;
+    transition: width 0s;
+}
+#defaultMenu > * > .item:first-of-type {
+    font-weight: 700;
+    font-size: 1.3em;
+}
+
+/* content */
+#content {
+    background-color: whitesmoke;
+}
+#content > section {
+    padding: 5em 0 6em 0;
+}
+
+/* logo introduction */
+section#logoIntro {
+    padding-top: 10em;
+    background-color: #0277BD;
+}
+#logoIntro .ts.header {
+    color: #EFEFEF;
+}
+#logoIntro .sub.header {
+    color: #f8f8f8;
+}
+#quoteContainer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* club introduction */
+#desktopTab {
+    font-size: 1em;
+}
+#mobileTab {
+    margin: 0;
+}
+#desktopTab .item:not(.active):not(:hover), #mobileTab .item:not(.active):not(:hover) {
+    color: #EFEFEF;
+}
+#mobileTab .item:hover { /* fixing mobile hover */
+    color: inherit;
+    background-color: inherit;
+}
+#mobileTab .active.item { /* fixing mobile hover */
+    color: #404040;
+    background-color: #F0F0F0;
+}
+#introContainer {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+#introContainer > .ts.active.segment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+}
+#introContainer > .ts.active.segment:last-child {
+    margin-bottom: 1em;
+}
+#introContainer > .ts.active.segment > img {
+    max-height: 50vh;
+}
+.ts.feature.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.ts.feature.container i.icon {
+    margin: 1em;
+    padding: 1.25em;
+    transform: rotate(45deg);
+    box-sizing: border-box;
+    border: 2px solid slategray;
+    font-size: 2.5em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .28571rem;
+}
+.ts.feature.container i.icon::before {
+    transform: rotate(-45deg);
+    display: block;
+}
+
+/* course */
+#courses {
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.35) 100%,rgba(0,0,0,0.35)),url('images/terminal.png');
+    background-size: cover;
+    background-position: center center;
+}
+#courses .ts.card {
+    border: 0;
+    box-shadow: none;
+}
+#courses .ts.card .extra.content:first-child {
+    border-radius: .28571rem;
+}
+
+/* activities */
+#activities .image.row .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    margin: .4rem;
+}
+
+#activities .image.row .column#cscampImage {
+    background-color: #3DBCA5;
+}
+
+/* footer */
+.logo {
+    max-width: 100%;
+    margin: auto;
+}
+footer.ts.segment {
+    margin: 0;
+}
+footer .inverted.segment > a > i.icon {
+    font-size: 1.35em;
+    margin: 0 0 0 .35em;
+}
+#contact {
+    padding: 0 .5em 0 0;
+}
+#contact > p {
+    letter-spacing: -.05em;
+}
+
+@media (max-width: 767px) {
+    #activities .row {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 540px) {
+    .ts.feature.container i.icon {
+        font-size: 1.75em;
+        margin: .8em;
+    }
+}
+
+@media (max-width: 370px) {
+    .ts.feature.container i.icon {
+        font-size: 1.25em;
+    }
+}

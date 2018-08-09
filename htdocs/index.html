@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<!--
+    IIIIIIIIII NNNNNNNN        NNNNNNNN FFFFFFFFFFFFFFFFFFFFFF      OOOOOOOOO      RRRRRRRRRRRRRRRRR   
+    I::::::::I N:::::::N       N::::::N F::::::::::::::::::::F    OO:::::::::OO    R::::::::::::::::R  
+    I::::::::I N::::::::N      N::::::N F::::::::::::::::::::F  OO:::::::::::::OO  R::::::RRRRRR:::::R 
+    II::::::II N:::::::::N     N::::::N FF::::::FFFFFFFFF::::F O:::::::OOO:::::::O RR:::::R     R:::::R
+      I::::I   N::::::::::N    N::::::N   F:::::F       FFFFFF O::::::O   O::::::O   R::::R     R:::::R
+      I::::I   N:::::::::::N   N::::::N   F:::::F              O:::::O     O:::::O   R::::R     R:::::R
+      I::::I   N:::::::N::::N  N::::::N   F::::::FFFFFFFFFF    O:::::O     O:::::O   R::::RRRRRR:::::R 
+      I::::I   N::::::N N::::N N::::::N   F:::::::::::::::F    O:::::O     O:::::O   R:::::::::::::RR  
+      I::::I   N::::::N  N::::N:::::::N   F:::::::::::::::F    O:::::O     O:::::O   R::::RRRRRR:::::R 
+      I::::I   N::::::N   N:::::::::::N   F::::::FFFFFFFFFF    O:::::O     O:::::O   R::::R     R:::::R
+      I::::I   N::::::N    N::::::::::N   F:::::F              O:::::O     O:::::O   R::::R     R:::::R
+      I::::I   N::::::N     N:::::::::N   F:::::F              O::::::O   O::::::O   R::::R     R:::::R
+    II::::::II N::::::N      N::::::::N FF:::::::FF            O:::::::OOO:::::::O RR:::::R     R:::::R
+    I::::::::I N::::::N       N:::::::N F::::::::FF             OO:::::::::::::OO  R::::::R     R:::::R
+    I::::::::I N::::::N        N::::::N F::::::::FF               OO:::::::::OO    R::::::R     R:::::R
+    IIIIIIIIII NNNNNNNN         NNNNNNN FFFFFFFFFFF                 OOOOOOOOO      RRRRRRRR     RRRRRRR
+
+    You have no sister.
+    (c) INFOR 31st.
+-->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>INFOR 31st</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <meta property="og:title" content="INFOR 31st 建中資訊社 第31屆" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://infor.org/" />
+    <meta property="og:image" content="https://infor.org/images/infor.png" />
+    <meta property="og:description" content="台北市立建國高級中學 Taipei Municipal Chien Kuo High School 資訊社 第三十一屆 / 30 x 31 交接茶會 Germinate" />
+    <!-- Tocas UI：CSS 與元件 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.css" />
+    <!-- Tocas JS：模塊與 JavaScript 函式 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <link rel="stylesheet" href="./infor31.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="ts overlapped right sidebar vertical menu">
+        <a class="right aligned item"><i class="close icon"></i></a>
+    </div>
+
+    <!-- Pusher -->
+    <div class="pusher">
+        <!-- Banner Menu -->
+        <div class="ts fluid secondary menu" id="bannerMenu">
+            <div class="ts container">
+                <a class="item" href="/">INFOR</a>
+                <div class="tablet or large device only right menu">
+                    <a class="item" href="https://pad.infor.org/">Pad</a>
+                    <a class="item" href="https://oj.infor.org/">Online Judge</a>
+                    <a class="item" href="https://mail.infor.org/">Email</a>
+                </div>
+                <a class="mobile only right item"><i class="sidebar icon"></i></a>
+            </div>
+        </div>
+        <!-- Banner -->
+        <header class="ts center aligned large fluid slate" id="banner">
+            <div class="image">
+                <div class="filter"></div>
+                <img src="images/group.jpg" alt="合照" />
+            </div>
+            <span class="header animated fadeIn">INFOR</span>
+            <span class="description animated fadeIn">台北市立建國高級中學<br />TAIPEI MUNICIPAL CHIEN KUO HIGH SCHOOL<br />資訊社</span>
+        </header>
+        <!-- Default Menu -->
+        <nav class="ts fluid pointing secondary menu" style="visibility: hidden;" id="defaultMenu">
+
+        </nav>
+        <!-- Content -->
+        <div class="ts fluid container" id="content">
+            <section class="ts fluid container" id="logoIntro">
+                <div class="ts inner container">
+                    <div class="ts huge center aligned header">
+                        INFOR 31st 社徽
+                        <div class="sub header">社團之精神象徵</div>
+                    </div>
+                    <div class="ts stackable grid">
+                        <div class="six wide column">
+                            <img src="images/logo.png" alt="logo" class="logo" />
+                        </div>
+                        <div class="ten wide column">
+                            <div class="ts padded flatted borderless inverted segment" id="quoteContainer">
+                                <blockquote class="ts quote">
+                                    <p>從極簡中淬煉出複雜。</p>
+                                    <cite>INFOR 31st 社徽設計人-圭月</cite>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ts fluid container" id="clubIntro">
+                <div class="ts inner container">
+                    <div class="ts huge center aligned header">
+                        社團特色
+                        <div class="sub header">由一群在資訊時代中探索科技領域、領導尖端知識的建中生相互合作、共同集結而成的大型社團</div>
+                    </div>
+                    <div class="ts stackable grid">
+                        <div class="four wide column ts inverted segment" id="tabContainer">
+                            <div class="ts tablet or large device only borderless flatted fluid secondary vertical menu" id="desktopTab">
+                                <a class="active item" data-tab="comunicate">學術交流</a>
+                                <a class="item" data-tab="activity">社團活動</a>
+                                <a class="item" data-tab="future">未來領航</a>
+                            </div>
+                            <div class="ts mobile only evenly divided secondary menu" id="mobileTab">
+                                <a class="active item" data-tab="comunicate">學術交流</a>
+                                <a class="item" data-tab="activity">社團活動</a>
+                                <a class="item" data-tab="future">未來領航</a>
+                            </div>
+                        </div>
+                        <div class="twelve wide column" id="introContainer">
+                            <div class="ts animated fadeIn active raised padded tab segment" data-tab="comunicate">
+                                <img src="images/academy.jpg" alt="academy" />
+                                <div class="ts center aligned big header">
+                                    學術交流
+                                    <div class="sub header">
+                                        建中資訊社為本校最大的社團之一，因而聚集了各種領域的專才。<br />
+                                        在專案小組或是研討會中，互相分享每個人的知識與想法，促使我們能製造出創新的成果。
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ts animated fadeIn raised padded tab segment" data-tab="activity">
+                                <img src="images/cscamp.jpg" alt="activity" />
+                                <div class="ts center aligned big header">
+                                    社團活動
+                                    <div class="sub header">
+                                        建中資訊社與全台近百個社團結為友社，並主要與楓資及景資一起主辦活動。<br />
+                                        除了常態的聯合社課以外，還有定期的暑訓、迎新、秋遊、寒訓和春遊等大型活動。
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ts animated fadeIn raised padded tab segment" data-tab="future">
+                                <img src="images/future.jpg" alt="future" />
+                                <div class="ts center aligned big header">
+                                    未來領航
+                                    <div class="sub header">
+                                        建中資訊社在全台灣至全世界佈下資訊科技的人才，我們不只侷限於僅僅一個高中的社團，更放眼至全世界最頂尖的資訊社群。
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ts feature container">
+                        <i class="book icon"></i>
+                        <i class="wifi icon"></i>
+                        <i class="area chart icon"></i>
+                    </div>
+                </div>
+            </section>
+            <section class="ts fluid container" id="courses">
+                <div class="ts inner container">
+                    <div class="ts huge center aligned inverted header">
+                        課程資訊
+                        <div class="sub header">每天放學時間在電教二所提供的免費課程，歡迎所有有興趣的同學來參加!</div>
+                    </div>
+                    <div class="ts center aligned clickable slate" id="refreshPlaceholder">
+                        <div class="ts inline text loader">載入中</div>
+                        <div class="ts refresh container" style="display: none;">
+                            <i class="refresh icon"></i>
+                            <span class="header">點此重試</span>
+                            <span class="description">點擊此處重新載入課程資訊。</span>
+                        </div>
+                        <div class="ts empty container">
+                            <i class="student icon"></i>
+                            <span class="header">敬請期待</span>
+                            <span class="description">更多優質課程即將推出!</span>
+                        </div>
+                    </div>
+                    <div class="ts stackable three cards" id="courseData">
+
+                    </div>
+                </div>
+            </section>
+            <section class="ts fluid container" id="activities">
+                <div class="ts inner container">
+                    <div class="ts huge center aligned header">
+                        各式活動
+                        <div class="sub header">不只是待在電腦前當個碼農，也有多采多姿的活動!</div>
+                    </div>
+                    <div class="ts stackable grid">
+                        <div class="tablet or large device only image two column row">
+                            <div class="column" id="cscampImage">
+                                <img src="images/cscamp_banner.png" alt="cscamp" />
+                            </div>
+                            <div class="column" id="welcomeImage">
+                                <img src="images/fiber.jpg" alt="迎新" />
+                            </div>
+                        </div>
+                        <div class="description row">
+                            <div class="sixteen wide mobile eight wide tablet eight wide computer column">
+                                <div class="ts basic segment">
+                                    <img class="mobile only" src="images/cscamp_banner.png" alt="cscamp" />
+                                    <div class="ts big header">暑訓--《資意成楓建美景》</div>
+                                    <p>由建國中學資訊社、成功高中電子計算機研習社、中山女高資訊研究社、景美女中電腦資訊社這幾個充滿熱忱的高中社團聯合舉辦。暑訓將以實作課程為主，加上企業參訪、有趣的活動，號召有興趣的國中畢業生一同探索資訊的世界。透過我們的營隊，同學將能更進一步了解什麼是資訊科技，培養進一步的資訊能力。</p>
+                                    <a class="ts info button" href="https://cscamp.codes/2018" target="_blank">查看更多<i class="right arrow icon"></i></a>
+                                </div>
+                                <div class="ts mobile only divider"></div>
+                            </div>
+                            <div class="sixteen wide mobile eight wide tablet eight wide computer column">
+                                <div class="ts basic segment">
+                                        <img class="mobile only" src="images/fiber.jpg" alt="迎新" />
+                                    <div class="ts big header">迎新--北區多校聯合迎新</div>
+                                    <p>今在充滿迷惘的高一新生生活<br />去探索更多青春的美好吧<br />巧遇更多的友情<br />尋找更多的巧遇</p>
+                                    <a class="ts disabled info button" href="https://cscamp.codes/2018" target="_blank">敬請期待</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Footer -->
+        <footer class="ts bottom attached very padded fluid inverted segment">
+            <div class="ts inner container">
+                <div class="ts stackable relaxed grid">
+                    <div class="four wide column" >
+                        <a href="/"><img src="images/logo.png" alt="logo" class="logo" /></a>
+                    </div>
+                    <div class="five wide placeholder column">
+                        <!-- Place Holder -->
+                    </div>
+                    <div class="three wide column">
+                        <div class="ts inverted big header">友社</div>
+                        <div class="ts inverted link list">
+                            <a href="https://www.facebook.com/CMIOC25/" target="_blank" class="item">景美電資 CMIOC 25th</a>
+                            <a href="https://www.facebook.com/zsisc25/" target="_blank" class="item">中山資研 ZSISC 25th</a>
+                            <a href="http://club.ckcsc.info/" target="_blank" class="item">成功電研 CKCSC 31st</a>
+                            <a href="https://www.facebook.com/ckeisc38th/" target="_blank" class="item">建中電研 CKEISC 38th</a>
+                            <a href="https://www.facebook.com/FGISC-32nd_%E5%8C%97%E4%B8%80%E8%B3%87%E7%A0%94-32%E5%B1%86-473942583027923/" target="_blank" class="item">北一資研 FGISC 32nd</a>
+                        </div>
+                    </div>
+                    <div class="two wide column">
+                        <div class="ts inverted big header">歷屆網站</div>
+                        <div class="ts inverted link list">
+                            <a href="https://29.infor.org/" target="_blank" class="item">INFOR 29th</a>
+                            <a href="https://30.infor.org/" target="_blank" class="item">INFOR 30th</a>
+                        </div>
+                    </div>
+                    <div class="two wide right aligned column">
+                        <div class="ts borderless flatted inverted segment" id="contact">
+                            <p>&copy; INFOR 31st</p>
+                            <p>Design <a href="https://github.com/t510599" target="_blank">t510599</a></p>
+                            <a href="mailto:infor.31st@gmail.com"><i class="mail icon"></i></a>
+                            <a href="https://facebook.com/infor31st/" target="_blank"><i class="facebook square icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Modal -->
+        <div class="ts modals dimmer">
+            <dialog class="ts closable modal">
+                <i class="close icon"></i>
+                <div class="header"></div>
+                <div class="image content"></div>
+            </dialog>
+        </div>
+    </div>
+    <script src="course.js"></script>
+    <script src="infor31.js"></script>
+</body>
+</html>
