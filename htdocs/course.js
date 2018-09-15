@@ -27,7 +27,7 @@ var modalContentTemplate =
     <img src="{{ image }}" />
 </div>
 <div class="description">
-    <p>{{ description }}</p>
+    {{ description }}
 </div>
 `
 
