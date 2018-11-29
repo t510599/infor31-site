@@ -82,24 +82,30 @@ function parseCourse(json){
         slate.css('display','none');
         courses = []; // reset
         json.forEach((course) => {
+            imagePreload(course.image);
             courses.push(course);
             var buttonSelector = '#courseData .ts.card[data-course="{{ name }}"] .button'.replace('{{ name }}',course.name);
             if (course.time == "") {
                 textNode = courseTemplate.replace(/{{ name }}/g,course.name).replace('{{ icon }}',course.icon).replace('{{ time }}','敬請期待');
-                $('#courseData').append(textNode)
+                $('#courseData').append(textNode);
                 $(buttonSelector).html('敬請期待');
-                $(buttonSelector).addClass('disabled')
+                $(buttonSelector).addClass('disabled');
             } else {
                 textNode = courseTemplate.replace(/{{ name }}/g,course.name).replace('{{ icon }}',course.icon).replace('{{ time }}','時間: '+course.time);
-                $('#courseData').append(textNode)
+                $('#courseData').append(textNode);
                 $(buttonSelector).click(function() {
                     modal.children('.header').html(course.name);
-                    modal.children('.content').html(modalContentTemplate.replace('{{ image }}',course.image).replace('{{ description }}',course.description))
+                    modal.children('.content').html(modalContentTemplate.replace('{{ image }}',course.image).replace('{{ description }}',course.description));
                     ts('.ts.modal').modal('show');
                 });
             }
         });
     }
+}
+
+function imagePreload(src) {
+    image = new Image();
+    image.src = src;
 }
 
 function hasShownOnTheScreen() {
