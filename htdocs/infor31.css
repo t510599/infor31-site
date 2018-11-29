@@ -3,6 +3,7 @@
     transition: all .2s ease;
     letter-spacing: .02em;
     font-family: Consolas,"SF Pro TC","SF Pro Text","SF Pro Icons","PingFang TC","Helvetica Neue","Helvetica","Microsoft JhengHei","Segoe UI",Ubuntu,微軟正黑體,"LiHei Pro","Droid Sans Fallback",Roboto,"Helvetica Neue","Droid Sans","Arial",sans-serif;
+    -webkit-overflow-scrolling: touch;
 }
 body,html {
     margin: 0;
