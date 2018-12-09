@@ -1,9 +1,8 @@
 /* General styles */
 * {
-    transition: all .2s ease;
+    transition: color,opacity,background-color .2s ease;
     letter-spacing: .02em;
     font-family: Consolas,"SF Pro TC","SF Pro Text","SF Pro Icons","PingFang TC","Helvetica Neue","Helvetica","Microsoft JhengHei","Segoe UI",Ubuntu,微軟正黑體,"LiHei Pro","Droid Sans Fallback",Roboto,"Helvetica Neue","Droid Sans","Arial",sans-serif;
-    -webkit-overflow-scrolling: touch;
 }
 body,html {
     margin: 0;
@@ -19,6 +18,12 @@ img {
 }
 .placeholder {
     opacity: 0;
+}
+.pusher {
+    -webkit-overflow-scrolling: touch;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 /* Banner */
@@ -148,12 +153,12 @@ section#logoIntro {
 #introContainer > .ts.active.segment > img {
     max-height: 50vh;
 }
-.ts.feature.container {
+.feature.container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-.ts.feature.container i.icon {
+.feature.container i.icon {
     margin: 1em;
     padding: 1.25em;
     transform: rotate(45deg);
@@ -165,7 +170,7 @@ section#logoIntro {
     justify-content: center;
     border-radius: .28571rem;
 }
-.ts.feature.container i.icon::before {
+.feature.container i.icon::before {
     transform: rotate(-45deg);
     display: block;
 }
@@ -223,14 +228,14 @@ footer .inverted.segment > a > i.icon {
 }
 
 @media (max-width: 540px) {
-    .ts.feature.container i.icon {
+    .feature.container i.icon {
         font-size: 1.75em;
         margin: .8em;
     }
 }
 
 @media (max-width: 370px) {
-    .ts.feature.container i.icon {
+    .feature.container i.icon {
         font-size: 1.25em;
     }
 }
