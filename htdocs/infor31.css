@@ -19,7 +19,7 @@ img {
 .placeholder {
     opacity: 0;
 }
-.pusher {
+.pusher, #introContainer div.ts.tab.segment, #introContainer div.ts.tab.segment > * {
     -webkit-overflow-scrolling: touch;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
