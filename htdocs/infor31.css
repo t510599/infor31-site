@@ -51,6 +51,8 @@ img {
     left: 0;
     bottom: 0;
     z-index: 1;
+    animation: filter .2s ease .5s;
+    animation-fill-mode: forwards;
 }
 
 /* Banner menu */
@@ -237,5 +239,15 @@ footer .inverted.segment > a > i.icon {
 @media (max-width: 370px) {
     .feature.container i.icon {
         font-size: 1.25em;
+    }
+}
+
+@keyframes filter {
+    from {
+        background-color: transparent;
+    }
+
+    to {
+        background-color: rgba(0,0,0,0.4);
     }
 }

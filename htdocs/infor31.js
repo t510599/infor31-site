@@ -62,6 +62,3 @@ function marquee() {
 };
 var marqueeTimer = setInterval(marquee,6500);
 /* marquee end */
-
-/* Banner image filter */
-setTimeout(() => {$('.filter').css("background-color","rgba(0,0,0,0.4)");},500);
