@@ -1,6 +1,6 @@
 # infor31-site
 建國中學資訊社 INFOR 31st 官網  
-Officail Site: [https://infor.org](https://infor.org)  
+Official Site: [https://infor.org](https://infor.org)  
 Facebook: [https://facebook.com/infor31st](https://facebook.com/infor31st)
 
 ## Installation
