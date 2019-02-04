@@ -1,5 +1,6 @@
 function IEtest() {
-    return /Trident/g.test(navigator.userAgent)
+    let usrAg = navigator.userAgent;
+    return (/Trident/g.test(usrAg) || (usrAg.indexOf('MSIE') > -1));
 }
 
 if (IEtest()) {
